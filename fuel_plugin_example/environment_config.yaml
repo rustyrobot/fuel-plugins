@@ -1,0 +1,14 @@
+attributes:
+  fuel_plugin_example_text:
+    value: 2333
+    label: 'Port'
+    description: 'Port which be used for service binding'
+    weight: 25
+    type: "text"
+
+  fuel_plugin_example_text2:
+    value: 0.0.0.0
+    label: 'Host'
+    description: 'Host which be used for service binding'
+    weight: 10
+    type: "text"
