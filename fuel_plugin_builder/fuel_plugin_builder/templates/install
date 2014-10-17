@@ -8,4 +8,4 @@ rm -rf  $plugin_path
 mkdir -p $plugin_path
 cp -rf * $plugin_path/
 
-python register_plugin.py
+python register_plugin.py ${plugin_name}

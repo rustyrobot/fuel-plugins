@@ -87,7 +87,7 @@ class CreatePlugin(BaseAction):
         self.plugin_path = plugin_path
         self.render_ctx = {
             'plugin_name': self.plugin_name,
-            'plugin_version': '0.1'}
+            'plugin_version': '0.1.0'}
 
     def check(self):
         if utils.exists(self.plugin_path):

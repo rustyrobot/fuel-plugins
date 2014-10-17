@@ -1,14 +1,7 @@
 attributes:
   ${plugin_name}_text:
-    value: 2333
-    label: 'Port'
-    description: 'Port which be used for service binding'
+    value: 'Set default value'
+    label: 'Text field'
+    description: 'Description for text field'
     weight: 25
-    type: "text"
-
-  ${plugin_name}_text2:
-    value: 0.0.0.0
-    label: 'Host'
-    description: 'Host which be used for service binding'
-    weight: 10
     type: "text"

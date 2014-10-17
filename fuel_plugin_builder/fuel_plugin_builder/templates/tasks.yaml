@@ -1,14 +1,14 @@
 # This tasks will be applied on controller nodes
-- role: ['controller', 'cinder']
+- role: ['controller']
   stage: post_deployment
   type: shell
   priority: 10
   parameters:
-    cmd: 
+    cmd: ./deploy.sh
     timeout: 42
 # Task is applied for all roles
-- role: *
-  stage: post_deployment
+- role: '*'
+  stage: pre_deployment
   type: shell
   priority: 10
   parameters:
