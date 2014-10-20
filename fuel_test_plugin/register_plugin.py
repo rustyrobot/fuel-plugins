@@ -84,11 +84,6 @@ def add_env_attrs(release, plugin_name, attrs):
     release['attributes_metadata']['editable'][plugin_name] = \
             dict(metadata.items() + attrs.items())
 
-def add_repos(release, repo_name, repo_path):
-    release.setdefault('orchestrator_data', {})
-    release['orchestrator_data'].setdefault('repo_metadata', {})
-    release['orchestrator_data']['repo_metadata'][repo_name] = repo_path
-
 
 def get_release(rel_id):
     print 'http://{0}/api/v1/releases/{1}'.format(master, rel_id)
@@ -120,10 +115,6 @@ def register_plugin(plugin_name):
         release,
         plugin_name,
         yaml.load(open('environment_config.yaml'))['attributes'])
-    add_repos(
-        release,
-        plugin_name,
-        'http://{0}/2014.1.1-5.1/centos/x86_64'.format(master))
     update_release(centos_id, release)
 
 
